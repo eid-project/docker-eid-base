@@ -21,7 +21,7 @@ RUN cd /home/eid ;\
     su -c "git clone https://git.yoctoproject.org/git/poky.git" eid
 
 RUN cd /home/eid/poky ;\
-    su -c "git clone https://github.com/zuka0828/meta-eid.git" eid
+    su -c "git clone https://github.com/eid-project/meta-eid.git" eid
 
 RUN cd /home/eid ;\
     echo y | ./poky/meta-eid/scripts/install-deps.sh
