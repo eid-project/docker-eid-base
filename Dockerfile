@@ -43,12 +43,6 @@ RUN export DEBIAN_FRONTEND noninteractive ;\
 RUN sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && \
     locale-gen
 
-RUN cd /home/eid ;\
-    su -c "source ./poky/meta-eid/setup.sh" eid
-
-RUN cd /home/eid/build ;\
-    ../poky/meta-eid/scripts/setup-sbuild.sh
-
 USER eid
 
 ENV LANG en_US.UTF-8
